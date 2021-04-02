@@ -1,5 +1,5 @@
 fn main(){
-    let string = String::from("How's it going? Ishver is here.");
+    let mut string = String::from("How's it going? Ishver is here.");
 
     // length
     println!("Length of string: {}", string.len());
@@ -14,5 +14,10 @@ fn main(){
 
     // checking whether the string contains some value or not.
     println!("Does the string contains 'Ishver'? {}",string.contains("Ishver"));
+    
+    // adding something in the string.
+    string.push_str(" Everything is connected...");
+    println!("Length of string: {}", string);
+
 
 }
