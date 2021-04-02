@@ -6,15 +6,15 @@ struct Rectangle {
 }
 
 impl Rectangle {
-    fn print_description(&self){
+    fn print_description(&self){  //adding description method
         println!("Rectangle: {} x {}", self.width, self.length);
     }
 
-    fn area(&self){
+    fn area(&self){ // adding area method
         println!("Area: {}", self.width*self.length);
     }
 
-    fn is_square(&self) -> bool{
+    fn is_square(&self) -> bool{  // adding method to check whether rectangle is square or not
         self.width == self.length
     }
 }
