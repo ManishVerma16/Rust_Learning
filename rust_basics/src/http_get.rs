@@ -1,8 +1,19 @@
 // Http get request
 
-extern crate reqwest;
+// extern crate reqwest;
 
-// use reqwest;
+use reqwest;
+
+fn main(){
+    let response_text = reqwest::get("http://www.google.com")
+    .expect("Couldn't make request")
+    .text().expect("Could not read response text!");
+
+    println!("Response Text: {}", response_text);
+}
+
+
+/*
 fn main() {
     match reqwest::get("http://www.google.com"){
         Ok(mut response) => {
@@ -22,3 +33,5 @@ fn main() {
         Err(_) => println!("Could not make request!"),
     }
 }
+
+*/
